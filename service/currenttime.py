@@ -9,7 +9,7 @@ import dotdictify
 app = Flask(__name__)
 logger = None
 format_string = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-logger = logging.getLogger('cvpartner-rest-service')
+logger = logging.getLogger('currenttime-rest-service')
 
 # Log to stdout
 stdout_handler = logging.StreamHandler()
