@@ -30,7 +30,7 @@ class DataAccess:
             logger.error("Unexpected response status code: %d with response text %s" % (req.status_code, req.text))
             raise AssertionError ("Unexpected response status code: %d with response text %s"%(req.status_code, req.text))
         res = dotdictify.dotdictify(json.loads(req.text))
-        for entity in res:
+        for entity in res['value']:
 
             yield(entity)
         logger.info('Returning entities')
